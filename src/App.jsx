@@ -51,6 +51,7 @@ export default function App() {
     }
   }, [paused]);
 
+  // function to update the marker
   const getLiveLocation = () => {
     const route = directionResponse.routes[0];
     const routePath = route.overview_path;
@@ -87,6 +88,7 @@ export default function App() {
     setPaused(false);
   };
 
+  //function for calculate the path between points
   const CalculateRoute = async () => {
     if (destinationlat === "" || destinationlng === "") return;
 
